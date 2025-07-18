@@ -26,5 +26,5 @@
     bind:value={url}
     class="!cursor-text rounded-r-none"
   />
-  <Button class="w-28 rounded-l-none" on:click={copyToClipboard}>{copyText}</Button>
+  <Button class="w-28 rounded-l-none" onclick={copyToClipboard}>{copyText}</Button>
 </div>
