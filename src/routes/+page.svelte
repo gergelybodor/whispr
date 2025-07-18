@@ -10,7 +10,7 @@
     try {
       const serializedPublicKey = await generateKeyPair();
       url = `${location.href}${serializedPublicKey}`;
-    } catch (error) {
+    } catch {
       toast("Couldn't generate key pair");
     }
   });

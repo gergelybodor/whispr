@@ -1,20 +1,22 @@
 <script lang="ts">
   import { Button } from '$lib/components/ui/button';
-  import { Sun, Moon } from 'radix-icons-svelte';
+  import { SunIcon, MoonIcon } from '@lucide/svelte';
   import { toggleMode } from 'mode-watcher';
 </script>
 
 <Button
-  class="absolute right-0 top-0 m-2 md:m-8"
-  on:click={toggleMode}
+  class="absolute top-0 right-0 m-2 md:m-8"
+  onclick={toggleMode}
   variant="outline"
   size="icon"
 >
-  <Sun
-    class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+  <SunIcon
+    size={20}
+    class="absolute rotate-0 transition-all duration-200 dark:-rotate-90 dark:opacity-0"
   />
-  <Moon
-    class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+  <MoonIcon
+    size={20}
+    class="absolute rotate-90 opacity-0 transition-all duration-200 dark:rotate-0 dark:opacity-100"
   />
   <span class="sr-only">Toggle theme</span>
 </Button>

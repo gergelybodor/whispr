@@ -25,7 +25,7 @@
         textAreaValue
       );
       url = `${window.location.href}/${encryptedSymmetricKeyBase64}/${encryptedDataBase64}`;
-    } catch (error) {
+    } catch {
       toast('Unable to encrypt text.');
     }
   }
@@ -49,7 +49,7 @@
       <Textarea id="secret" bind:value={textAreaValue} maxlength={textAreaMaxLength} rows={6}
       ></Textarea>
     </div>
-    <Button class="w-full" disabled={textAreaValue.length === 0} on:click={encrypt}>Encrypt</Button>
+    <Button class="w-full" disabled={textAreaValue.length === 0} onclick={encrypt}>Encrypt</Button>
   </div>
 
   {#if url}
